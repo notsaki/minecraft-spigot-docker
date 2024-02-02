@@ -1,0 +1,20 @@
+version: "3.3"
+
+services:
+  minecraft-server:
+    container_name: minecraft-server
+    image: tsaki/spigot-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "25565:25565/udp"
+      - "25565:25565"
+    environment:
+      - "REV=latest"
+      - "SERVER_OPTIONS=-Xmx1G -Xms1G"
+    volumes:
+      - "spigot-server:/opt/spigot-server"
+
+volumes:
+  spigot-server:
