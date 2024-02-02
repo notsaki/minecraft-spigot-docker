@@ -19,7 +19,7 @@ WORKDIR /opt
 
 RUN mv ./build-tools/spigot*.jar ./minecraft-server/server.jar
 RUN echo "eula=true" > ./minecraft-server/eula.txt
-RUN echo "screen -d -m \"java $SERVER_OPTIONS -jar server.jar\"" > ./minecraft-server/start.sh
+RUN echo "screen -AmdS minecraft java $SERVER_OPTIONS -jar server.jar" > ./minecraft-server/start.sh
 
 RUN apt-get remove -y wget git
 
@@ -28,3 +28,5 @@ WORKDIR /opt/minecraft-server
 EXPOSE 25565
 EXPOSE 25565/udp
 VOLUME /opt/minecraft-server
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]
