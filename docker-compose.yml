@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   minecraft-server:
-    container_name: minecraft-server
+    container_name: spigot-server
     image: tsaki/spigot-server
     build:
       context: .
