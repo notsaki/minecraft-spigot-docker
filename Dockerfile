@@ -21,7 +21,9 @@ RUN mv ./build-tools/spigot*.jar ./minecraft-server/server.jar
 RUN echo "eula=true" > ./minecraft-server/eula.txt
 RUN echo "screen -AmdS minecraft java $SERVER_OPTIONS -jar server.jar" > ./minecraft-server/start.sh
 
-RUN apt-get remove -y wget git
+chmox +x ./minecraft-server/start.sh
+
+RUN apt-get remove -y wget git1
 
 WORKDIR /opt/minecraft-server
 
