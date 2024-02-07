@@ -1,7 +1,7 @@
 FROM debian:stable
 LABEL authors=tsaki
 
-ARG REV=latest
+ARG REV="latest"
 ARG SERVER_OPTIONS="-Xmx1G -Xms1G"
 
 RUN apt-get update \
