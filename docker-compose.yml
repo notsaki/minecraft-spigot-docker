@@ -15,6 +15,8 @@ services:
       - "SERVER_OPTIONS=-Xmx1G -Xms1G"
     volumes:
       - "spigot-server:/opt/spigot-server"
+    stdin_open: true
+    tty: true
 
 volumes:
   spigot-server:

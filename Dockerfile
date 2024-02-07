@@ -31,4 +31,4 @@ EXPOSE 25565
 EXPOSE 25565/udp
 VOLUME /opt/minecraft-server
 
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+ENTRYPOINT ["./start.sh"]
