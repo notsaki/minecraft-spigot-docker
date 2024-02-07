@@ -27,6 +27,8 @@ RUN apt-get remove -y wget git1
 
 WORKDIR /opt/minecraft-server
 
+ADD server.properties ./server.properties
+
 EXPOSE 25565
 EXPOSE 25565/udp
 VOLUME /opt/minecraft-server
