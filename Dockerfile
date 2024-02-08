@@ -20,7 +20,7 @@ WORKDIR /opt
 RUN mv ./build-tools/spigot*.jar ./minecraft-server/server.jar
 RUN echo "eula=true" > ./minecraft-server/eula.txt
 
-RUN apt-get remove -y wget git1
+RUN apt-get remove -y wget git
 
 WORKDIR /opt/minecraft-server
 
