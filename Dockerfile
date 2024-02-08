@@ -30,4 +30,4 @@ EXPOSE 25565
 EXPOSE 25565/udp
 VOLUME /opt/minecraft-server
 
-ENTRYPOINT ["screen", "-AmdS", "minecraft", "java", "$SERVER_OPTIONS", "-jar", "server.jar"]
+ENTRYPOINT ["java", "$SERVER_OPTIONS", "-jar", "server.jar"]
